@@ -6,3 +6,7 @@
 // of pivot.
 // repeat for left side of pivot and right side of pivot
 import java.util.*;
+
+public class quickSort {
+
+}
