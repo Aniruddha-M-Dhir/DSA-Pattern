@@ -5,6 +5,20 @@
 import java.util.*;
 
 public class SecondLargest {
+    public static void sort(int[] arr, int n) {
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j + 1];
+                    arr[j + 1] = arr[j];
+                    arr[j] = temp;
+                }
+
+            }
+        }
+
+    }
+
     public static int largest(int[] arr, int n) {
         int largest = arr[0];
         for (int i = 0; i < n; i++) {
@@ -25,9 +39,9 @@ public class SecondLargest {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int result = largest(arr, n);
-        System.out.println(result);
-
+        System.out.println("result");
+        sort(arr, n);
+        System.out.println(arr[n - 2]);
     }
 
 }
