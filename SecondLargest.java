@@ -5,29 +5,51 @@
 import java.util.*;
 
 public class SecondLargest {
-    public static void sort(int[] arr, int n) {
-        for (int i = n - 1; i >= 0; i--) {
-            for (int j = 0; j < i; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j + 1];
-                    arr[j + 1] = arr[j];
-                    arr[j] = temp;
-                }
+    // public static void sort(int[] arr, int n) {
+    // for (int i = n - 1; i >= 0; i--) {
+    // for (int j = 0; j < i; j++) {
+    // if (arr[j] > arr[j + 1]) {
+    // int temp = arr[j + 1];
+    // arr[j + 1] = arr[j];
+    // arr[j] = temp;
+    // }
 
-            }
-        }
+    // }
+    // }
 
-    }
+    // }
 
-    public static int largest(int[] arr, int n) {
+    // public static int largest(int[] arr, int n) {
+    // int largest = arr[0];
+    // for (int i = 0; i < n; i++) {
+    // if (arr[i] > largest) {
+    // largest = arr[i];
+    // }
+
+    // }
+    // for (int i = n-2; i>0; i-- ){
+    // if (arr[i] != largest){
+
+    // }
+    // }
+    // return largest;
+
+    // }
+
+    public static int firstPass(int[] arr, int n) { // better approach fo )(2N)
         int largest = arr[0];
+        int sLargest = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             if (arr[i] > largest) {
                 largest = arr[i];
             }
-
         }
-        return largest;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] > sLargest && arr[i] != largest) {
+                sLargest = arr[i];
+            }
+        }
+        return sLargest;
     }
 
     public static void main(String[] args) {
@@ -40,8 +62,8 @@ public class SecondLargest {
             arr[i] = sc.nextInt();
         }
         System.out.println("result");
-        sort(arr, n);
-        System.out.println(arr[n - 2]);
+        int result = firstPass(arr, n);
+        System.out.println(result);
     }
 
 }
