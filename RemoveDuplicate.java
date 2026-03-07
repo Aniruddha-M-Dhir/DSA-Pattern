@@ -6,15 +6,25 @@ import java.util.Scanner;
 //if the index of i != j, then a non duplicate was found
 // we increment the value of i
 public class RemoveDuplicate {
+    // public static int removeDuplicate(int[] arr, int n) {
+    // int i = 0;
+    // for (int j = 1; j < n; j++) {
+    // if (arr[i] != arr[j]) { // so the value of the second index will be the
+    // newfound value
+    // arr[i + 1] = arr[j];
+    // i++; // i pointer is now at the newfound value
+    // }
+    // }
+    // return i + 1;// just to return the actual nums , not index cuz it starts at 0
     public static int removeDuplicate(int[] arr, int n) {
         int i = 0;
         for (int j = 1; j < n; j++) {
-            if (arr[i] != arr[j]) { // so the value of the second index will be the newfound value
-                arr[i + 1] = arr[j];
-                i++; // i pointer is now at the newfound value
+            if (arr[i + 1] != arr[j]) {
+                arr[i + 1] = j;
+                i++;
             }
         }
-        return i + 1;// just to return the actual nums , not index cuz it starts at 0
+        return i + 1;
     }
 
     public static void main(String[] args) {
