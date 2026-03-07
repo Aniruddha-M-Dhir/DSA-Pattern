@@ -36,16 +36,30 @@ public class SecondLargest {
 
     // }
 
-    public static int firstPass(int[] arr, int n) { // better approach fo )(2N)
+    // public static int firstPass(int[] arr, int n) { // better approach fo )(2N)
+    // int largest = arr[0];
+    // int sLargest = Integer.MIN_VALUE;
+    // for (int i = 0; i < n; i++) {
+    // if (arr[i] > largest) {
+    // largest = arr[i];
+    // }
+    // }
+    // for (int i = 0; i < n; i++) {
+    // if (arr[i] > sLargest && arr[i] != largest) {
+    // sLargest = arr[i];
+    // }
+    // }
+    // return sLargest;
+    // }
+
+    public static int optimal(int[] arr, int n) {
         int largest = arr[0];
         int sLargest = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             if (arr[i] > largest) {
+                sLargest = largest;
                 largest = arr[i];
-            }
-        }
-        for (int i = 0; i < n; i++) {
-            if (arr[i] > sLargest && arr[i] != largest) {
+            } else if (arr[i] < largest && arr[i] > sLargest) {
                 sLargest = arr[i];
             }
         }
@@ -62,7 +76,9 @@ public class SecondLargest {
             arr[i] = sc.nextInt();
         }
         System.out.println("result");
-        int result = firstPass(arr, n);
+        // int result = System.out.println(arr[n-2]);
+        // int result = firstPass(arr, n);
+        int result = optimal(arr, n);
         System.out.println(result);
     }
 
