@@ -1,14 +1,22 @@
 import java.util.*;
 
 public class FindMissingValue {
+    // public static int missingValue(int[] arr, int n) {
+    // int sum = 0;
+
+    // int realSum = n * (n + 1) / 2;
+
+    // for (int i = 0; i < n; i++) {
+    // sum = sum + arr[i];
+
+    // }
+    // return realSum - sum;
+    // }
     public static int missingValue(int[] arr, int n) {
-        int sum = 0;
-
         int realSum = n * (n + 1) / 2;
-
+        int sum = 0;
         for (int i = 0; i < n; i++) {
             sum = sum + arr[i];
-
         }
         return realSum - sum;
     }
