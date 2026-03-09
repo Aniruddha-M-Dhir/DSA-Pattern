@@ -2,11 +2,23 @@ import java.util.*;
 
 //the order of sorting is ascending [1,4,5,6,7,9]
 public class IsSorted {
+    // public static boolean isSorted(int[] arr, int n) {
+    // for (int i = 1; i < n; i++) {
+    // if (arr[i] >= arr[i - 1]) {
+
+    // } else {
+    // return false;
+    // }
+    // }
+    // return true;
+    // }
     public static boolean isSorted(int[] arr, int n) {
         for (int i = 1; i < n; i++) {
             if (arr[i] >= arr[i - 1]) {
 
-            } else {
+            }
+
+            else {
                 return false;
             }
         }
