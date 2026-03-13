@@ -2,10 +2,15 @@ import java.util.*;
 
 public class FindUniqueNum {
     public static int uniqueNum(int[] arr, int n) {
+        // int xor = 0;
+        // for (int i = 0; i < n; i++) {
+        // xor = xor ^ arr[i]; // if a^ a, 0 is ans, if not , returns num itself
+
+        // }
+        // return xor;
         int xor = 0;
         for (int i = 0; i < n; i++) {
-            xor = xor ^ arr[i]; // if a^ a, 0 is ans, if not , returns num itself
-
+            xor = xor ^ arr[i];
         }
         return xor;
 
