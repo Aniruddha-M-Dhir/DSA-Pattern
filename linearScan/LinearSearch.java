@@ -1,3 +1,5 @@
+package linearScan;
+
 import java.util.Scanner;
 
 public class LinearSearch {
@@ -10,6 +12,14 @@ public class LinearSearch {
     // return -1;
 
     // }
+    // public static int linearSearch(int[] arr, int n, int x) {
+    // for (int i = 0; i < n; i++) {
+    // if (arr[i] == x) {
+    // return i;
+    // }
+    // }
+    // return -1;
+    // }
     public static int linearSearch(int[] arr, int n, int x) {
         for (int i = 0; i < n; i++) {
             if (arr[i] == x) {
@@ -17,6 +27,7 @@ public class LinearSearch {
             }
         }
         return -1;
+
     }
 
     public static void main(String[] args) {

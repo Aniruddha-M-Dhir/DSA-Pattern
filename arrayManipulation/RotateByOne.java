@@ -1,16 +1,30 @@
+package arrayManipulation;
+
 import java.util.Scanner;
 
-public class ReverseArray {
-    public static void reverseArray(int[] arr, int n) {
-        int start = 0;
-        int end = n - 1;
-        while (start < end) {
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
-            end--;
+public class RotateByOne {
+    // public static void rotateByOne(int[] arr, int n) {
+    // int temp = arr[0];
+    // for (int i = 1; i < n; i++) {
+    // arr[i - 1] = arr[i];
+
+    // }
+    // arr[n - 1] = temp;
+
+    // }
+    // public static void rotateByOne(int[] arr, int n) {
+    // int temp = arr[0];
+    // for (int i = 1; i < n; i++) {
+    // arr[i - 1] = arr[i];
+    // }
+    // arr[n - 1] = temp;
+    // }
+    public static void rotateByOne(int[] arr, int n) {
+        int temp = arr[0];
+        for (int i = 1; i < n; i++) {
+            arr[i - 1] = arr[i];
         }
+        arr[n - 1] = temp;
 
     }
 
@@ -28,11 +42,12 @@ public class ReverseArray {
         // int result = firstPass(arr, n);
         // int result = removeDuplicate(arr, n);
         // System.out.println(result);
-        reverseArray(arr, n);
+        rotateByOne(arr, n);
 
         for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
         }
 
     }
+
 }

@@ -1,3 +1,5 @@
+package twopointers;
+
 import java.util.Scanner;
 
 // tw0 pointer approach
@@ -16,13 +18,37 @@ public class RemoveDuplicate {
     // }
     // }
     // return i + 1;// just to return the actual nums , not index cuz it starts at 0
+    // public static int removeDuplicate(int[] arr, int n) {
+    // int i = 0;
+    // for (int j = 1; j < n; j++) {
+    // if (arr[i + 1] != arr[j]) {
+    // arr[i + 1] = j;
+    // i++;
+    // }
+    // }
+    // return i + 1;
+    // }
+
+    // public static int removeDuplicate(int[] arr, int n) {
+    // int i = 0;
+    // for (int j = 0; j < n; j++) {
+    // if (arr[i + 1] != arr[j]) {
+    // arr[i + 1] = arr[j];
+    // i++;
+
+    // }
+
+    // }
+    // return i;
+    // }
     public static int removeDuplicate(int[] arr, int n) {
         int i = 0;
         for (int j = 1; j < n; j++) {
             if (arr[i + 1] != arr[j]) {
-                arr[i + 1] = j;
+                arr[i + 1] = arr[j];
                 i++;
             }
+
         }
         return i + 1;
     }

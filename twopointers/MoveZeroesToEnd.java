@@ -1,3 +1,5 @@
+package twopointers;
+
 import java.util.*;
 
 public class MoveZeroesToEnd {
@@ -29,12 +31,55 @@ public class MoveZeroesToEnd {
     // i++;
     // }
     // }
+    // public static void noZero(int[] arr, int n) {
+    // int i = 0;
+    // for (int j = 0; j < n; j++) {
+    // if (arr[j] != 0) {
+    // arr[i] = arr[j];
+    // i++;
+    // }
+
+    // }
+    // while (i < n) {
+    // arr[i] = 0;
+    // i++;
+    // }
+    // }
+    // public static void noZero(int[] arr, int n) {
+    // int i = 0;
+    // for (int j = 0; j < n; j++) {
+    // if (arr[j] != 0) {
+    // arr[i] = arr[j];
+    // i++;
+    // }
+    // }
+    // // while (i < n) {
+    // // arr[i] = 0;
+    // // i++;
+    // // }
+
+    // }
+    // public static void noZero(int[] arr, int n) {
+    // int i = 0;
+    // for (int j = 0; j < n; j++) {
+    // if (arr[j] != 0) {
+    // arr[i] = arr[j];
+    // i++;
+    // }
+
+    // }
+    // while (i < n) {
+    // arr[i] = 0;
+    // i++;
+    // }
+    // }
     public static void noZero(int[] arr, int n) {
         int i = 0;
         for (int j = 0; j < n; j++) {
             if (arr[j] != 0) {
                 arr[i] = arr[j];
                 i++;
+
             }
 
         }

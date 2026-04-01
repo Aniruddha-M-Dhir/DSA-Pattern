@@ -1,3 +1,4 @@
+package linearScan;
 
 // the second largest can be returned by sorting, and returning the n-2 element. 
 // there is a better approach. since the brute will give O(NlogN)
@@ -52,12 +53,25 @@ public class SecondLargest {
     // return sLargest;
     // }
 
+    // public static int optimal(int[] arr, int n) {
+    // int largest = arr[0];
+    // int sLargest = Integer.MIN_VALUE;
+    // for (int i = 0; i < n; i++) {
+    // if (arr[i] > largest) {
+    // sLargest = largest;
+    // largest = arr[i];
+    // } else if (arr[i] < largest && arr[i] > sLargest) {
+    // sLargest = arr[i];
+    // }
+    // }
+    // return sLargest;
+    // }
+
     public static int optimal(int[] arr, int n) {
         int largest = arr[0];
         int sLargest = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
             if (arr[i] > largest) {
-                sLargest = largest;
                 largest = arr[i];
             } else if (arr[i] < largest && arr[i] > sLargest) {
                 sLargest = arr[i];
@@ -65,6 +79,21 @@ public class SecondLargest {
         }
         return sLargest;
     }
+
+    // public static void main (String [] args) {
+    // System.out.println("enter the num of elements ");
+    // int n = sc.nextInt();
+    // int [] arr = new int [n];
+    // System.out.println("enter elements ");
+    // for (int i = 0;i <n; i++){
+    // arr[i] = sc.nextInt();
+
+    // }
+    // System.out.println("result");
+    // int result = optimal(arr, n);
+    // System.out.println(result);
+
+    // }
 
     public static void main(String[] args) {
         System.out.println("enter num of elements ");

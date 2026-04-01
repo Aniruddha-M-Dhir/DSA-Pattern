@@ -1,3 +1,5 @@
+package linearScan;
+
 import java.util.*;
 // // Largest element in an array
 // class Solution {
@@ -13,6 +15,17 @@ import java.util.*;
 
 // }
 // }
+// public class LargestElement {
+//     public static int largest(int[] arr, int n) {
+//         int largest = arr[0];
+//         for (int i = 0; i < n; i++) {
+//             if (arr[i] > largest) {
+//                 largest = arr[i];
+//             }
+//         }
+//         return largest;
+
+//     }
 public class LargestElement {
     public static int largest(int[] arr, int n) {
         int largest = arr[0];
@@ -22,7 +35,6 @@ public class LargestElement {
             }
         }
         return largest;
-
     }
 
     public static void main(String[] args) {
